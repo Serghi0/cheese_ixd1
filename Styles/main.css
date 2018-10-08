@@ -16,27 +16,16 @@ body{
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
-  /*background-color: rgba(50, 50, 50, 0.5);*/
   font-family: 'Asap Condensed', verdana, sans-serif;
-  /*text-shadow: 1px 1px 1px #000;*/
 }
 
 h2, h3 {
   color:black;
-  /*font-size: 1em;*/
   font-weight: normal;
-  /*background-color: rgba(50, 50, 50, 0.5);*/
-  /*padding: 0.4em;*/
-  /*border-radius: 0.2em;*/
   font-family: 'Asap Condensed', verdana, sans-serif;
-  /*text-shadow: 1px 1px 1px #000;*/
 
-}
-h3 {
-  /*font-size: 0.8em;*/
-  /*background-color: rgba(50, 50, 50, 0.2);  */
 }
 
 a{
@@ -95,9 +84,12 @@ figcaption{
 }
 
 .ad2 > select{ 
-font-size: 16px; }
-@media only screen and (min-width: 601px){
-h1 {
-  text-align: left;
+font-size: 16px;
+display:flex;
+justify-self: center;
+align-self: : center;
 }
+
+@media only screen and (min-width: 768px){
+
 }
