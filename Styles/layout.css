@@ -45,6 +45,8 @@ body{
 
 #passieTitel{
   grid-area:titel;
+  display:flex;
+  align-self: flex-start;
 }
 
 #awardPic{
@@ -123,12 +125,12 @@ header {
 
 .active {
   grid-template-columns: 100px 1fr 1fr;
-  /*transition: grid-template-columns 0.6s; /*doet het helaas nog niet*/*/
+  /*transition: grid-template-columns 0.6s; /*doet het helaas nog niet*/
 }
 
 .inactive {
   grid-template-columns: 0 1fr 1fr;
-  /*transition: grid-template-columns 0.6s; /*doet het helaas nog niet*/*/
+  /*transition: grid-template-columns 0.6s; /*doet het helaas nog niet*/
 }
 
 
@@ -141,7 +143,7 @@ nav {
   display: flex;
   flex-flow: column;
   padding: 0;
-  /*padding-top: 90%;*/
+  padding-top: 90%;
   margin: 0;
 }
 
@@ -185,12 +187,12 @@ nav > ul > li > a {
 
 .active {
   grid-template-columns: repeat(2,100px) repeat(4,1fr);
-  transition: grid-template-columns 0.6s; /*doet het helaas nog niet*/
+  /*transition: grid-template-columns 0.6s;*/ /*doet het helaas nog niet*/
 }
 
 .inactive {
   grid-template-columns: repeat(2,0) repeat(4,1fr);
-  transition: grid-template-columns 0.6s; /*doet het helaas nog niet*/
+  /*transition: grid-template-columns 0.6s;*/ /*doet het helaas nog niet*/
 }
 
 .main{
@@ -204,7 +206,7 @@ nav > ul > li > a {
 @media only screen and (min-width: 1024px){
   body{
     grid-template-columns: repeat(6,1fr);
-    grid-template-rows: 2fr 1fr 6fr 8fr 1fr;
+    grid-template-rows: 1fr 1fr 6fr 8fr 1fr;
     grid-column-gap: 1px; 
     grid-template-areas: 
           "title title title title title title"
@@ -247,7 +249,7 @@ nav > ul > li > a {
 }
 
 #passie{
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 3fr;
   grid-template-columns: repeat(2,1fr);
   grid-gap:0;
   grid-template-areas: 
@@ -270,7 +272,8 @@ nav > ul > li > a {
     display: flex;
     flex-flow: row;
     overflow:visible;
-    /*padding-top:0;*/
+    padding-top:0;
+    align-items: center;
   }
   nav ul{
     display: flex;
@@ -291,7 +294,7 @@ nav > ul > li > a {
 
 @media only screen and (min-width: 1440px){
 body{
-  grid-template-rows: 1fr 1fr 9fr 10fr 1fr;
+  /*grid-template-rows: 1fr 1fr 9fr 10fr 1fr;*/
 }
 
 .main{
