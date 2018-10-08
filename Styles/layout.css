@@ -83,6 +83,7 @@ body{
 
 .ad2 > select{
   margin: 10px 0 12px 0;
+  max-width: 100%;
 }
 
 .foot {
