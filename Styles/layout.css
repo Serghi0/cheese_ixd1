@@ -1,24 +1,27 @@
 
 body{
+  z-index: 2;
   height:100vh !important;
   width: 100vw !important;
   display: grid;
-  grid-template-columns: 0 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 0px;
-  grid-template-areas: 
-        "menu title title"
-        "menu main  main"
-        "menu ad1   ad1"
-        "menu ad2   ad2"
-        "menu foot  foot "; 
+  transition: all 1s;
 }
 
 .header{
-  grid-area: title;
+  grid-column:1/span 3;
+  grid-row:  1;
 } 
 
+.header, .main, .ad1, .ad2, .foot{
+  z-index: 2;
+}
+
 .main{
-  grid-area: main;
+  grid-column:1/span 3;
+  grid-row:  2;
   display:grid;
   grid-template-columns: 1fr;
   grid-gap:0;
@@ -58,14 +61,16 @@ body{
 }
 
 #menu {
-  grid-area: menu;
+  grid-column:1/span 1;
+  grid-row:2/ span 6;
 }
 
-.ad1 {
-  grid-area: ad1;
+.ad1 {grid-row: 3;
+  grid-column:1/span 3;
 }
 .ad2 {
-  grid-area: ad2;
+  grid-row:  4;
+  grid-column:1/span 3;
 }
 
 .ad2 > select{
@@ -73,8 +78,10 @@ body{
 }
 
 .foot {
-  grid-area: foot;
+  grid-column:1/span 3;
+  grid-row: 5;
   display:flex;
+  flex-flow: row;
   align-items: center;
   justify-content: center;
 
@@ -82,11 +89,37 @@ body{
 
 #social{
   grid-area: social;
+  padding-right: 10px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap:10px;
   grid-template-areas: 
   "facebook twitter email";
+}
+
+#social > a, #telephone > a{
+  border-radius:5px;
+}
+
+#social > a:hover{
+  background-color: #D16F5E;
+  transition: color 1.5s ease-in;
+}
+
+#telephone > a:hover{
+  color: #D16F5E;
+  transition: color 1.5s ease-in;
+}
+
+#telephone{
+  padding-left: 10px;
+  font-size:16px;
+  font-weight: bold;
+  border-left: 2px solid black;
+}
+
+#telephone > a{
+  color: #000;
 }
 
 #facebook{
@@ -109,7 +142,7 @@ header {
   flex-flow: row;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .menutoggle {
@@ -118,19 +151,25 @@ header {
 }
 
 .menutoggle a{
-  font-size: 2em;
+  font-size: 1.2em;
   color: #000;
   text-decoration: none;
 }
 
 .active {
-  grid-template-columns: 100px 1fr 1fr;
-  /*transition: grid-template-columns 0.6s; /*doet het helaas nog niet*/
+  max-height: 100vw;
+  z-index:3;
+  transition: z-index 5ms ease-in-out, max-height ease-in-out 1s;
+
 }
 
 .inactive {
-  grid-template-columns: 0 1fr 1fr;
-  /*transition: grid-template-columns 0.6s; /*doet het helaas nog niet*/
+  z-index:1;
+  max-height: 0vh;
+  transition:  max-height ease-in-out 1s, z-index 500ms ease-in-out 1s;
+
+  /*max-height: 0vh;*/
+  /*transition: all 1s;*/
 }
 
 
@@ -143,7 +182,7 @@ nav {
   display: flex;
   flex-flow: column;
   padding: 0;
-  padding-top: 90%;
+  /*padding-top: 90%;*/
   margin: 0;
 }
 
@@ -176,35 +215,57 @@ nav > ul > li > a {
 
 @media only screen and (min-width: 768px){
   body{
-  grid-template-columns: repeat(2,0) repeat(4,1fr);
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,1fr);
   grid-gap: 0px;
-  grid-template-areas: 
+/*  grid-template-areas: 
         "menu menu title title title title"
         "menu menu main  main ad1 ad1"
         "menu menu main main  ad2 ad2"
-        "menu menu foot  foot foot foot"; 
+        "menu menu foot  foot foot foot"; */
   }
 
+.header{
+  grid-column:1/span 4;
+  grid-row:  1;
+} 
+
+.main{
+    grid-column:1/span 2;
+    grid-row:  2;
+  }
+#menu {
+  grid-column:1/span 1;
+  grid-row:2/ span 4;
+}
+
+.ad1 {grid-row: 2;
+  grid-column:3/span 2;
+}
+.ad2 {
+  grid-row:  3;
+  grid-column:3/span 2;
+}
+
+.foot {
+  grid-column:1/span 4;
+  grid-row: 4;
+}
+
 .active {
-  grid-template-columns: repeat(2,100px) repeat(4,1fr);
-  /*transition: grid-template-columns 0.6s;*/ /*doet het helaas nog niet*/
 }
 
 .inactive {
-  grid-template-columns: repeat(2,0) repeat(4,1fr);
-  /*transition: grid-template-columns 0.6s;*/ /*doet het helaas nog niet*/
 }
 
-.main{
-/*  grid-template-rows: 2fr 1fr;
-*/
-}
+
 
 }
 
 
 @media only screen and (min-width: 1024px){
   body{
+    /*transition:none;*/
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: 1fr 1fr 6fr 8fr 1fr;
     grid-column-gap: 1px; 
@@ -215,6 +276,14 @@ nav > ul > li > a {
           "ad1  ad1  ad1  ad2 ad2   ad2"
           "foot  foot foot foot foot foot"; 
   }
+
+.header{grid-area: title;}  
+.main{grid-area: main;}
+#menu {grid-area: menu;}
+.ad1 {grid-area: ad1;}
+.ad2 {grid-area: ad2;}
+.foot {grid-area: foot;}
+.inactive, .active{ max-height:100vh; }
 
 .main{
   padding:1% 5% 0 5%;

@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+@font-face {
+    font-family: modern-icons;
+    src: url(Modern-Icons.ttf);
+}
 
 html {
   box-sizing: border-box;
@@ -17,7 +21,7 @@ body{
   font-family: "Open Sans", sans-serif;
   margin: 0;
   font-size: 14px;
-  line-height: 1.5
+  line-height: 1.5;
 }
 
 h1, h2, h3{
@@ -25,6 +29,8 @@ h1, h2, h3{
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
+
+
 
 h1 {
   text-align: left;
@@ -44,6 +50,11 @@ h3{
 a{
   text-decoration: none;
   color:#9B870B;
+}
+
+a:hover{
+  color: #D16F5E;
+ transition: color 1.5s ease-in;
 }
 
 .header, .main, .ad1, .ad2, .foot{
@@ -74,9 +85,8 @@ img {
   margin: 0;
   border-radius: 10px;
 }
-
-/*footer {
-
+/*
+footer {
 }*/
 
 figure{
@@ -89,8 +99,8 @@ figcaption{
 }
 
 .icons{
-  height:24px;
-  width:24px;
+  height:16px;
+  width:16px;
   display: flex;
   align-self: center;
   justify-self: center;
@@ -103,6 +113,9 @@ justify-self: center;
 align-self: : center;
 }
 
-@media only screen and (min-width: 768px){
-
+@media only screen and (min-width: 1024px){
+.icons{
+  height:24px;
+  width: 24px;
+}
 }
