@@ -168,14 +168,14 @@ header {
   max-height: 100vw;
   z-index:3;
   transition: z-index 5ms ease-in-out, max-height ease-in-out 1s;
-
+  -webkit-transition: z-index 5ms ease-in-out, max-height ease-in-out 1s, -webkit-transform 2s;
 }
 
 .inactive {
   z-index:1;
   max-height: 0vh;
   transition:  max-height ease-in-out 1s, z-index 500ms ease-in-out 1s;
-
+  -webkit-transition:max-height ease-in-out 1s, z-index 500ms ease-in-out 1s, -webkit-transform 2s;
   /*max-height: 0vh;*/
   /*transition: all 1s;*/
 }
