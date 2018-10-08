@@ -167,7 +167,7 @@ header {
 
 .active {
   max-height: 100vh;
-  z-index:3;
+  z-index:999;
   transition: z-index 5ms ease-in-out, max-height ease-in-out 1s;
   -webkit-transition: z-index 5ms ease-in-out, max-height ease-in-out 1s, -webkit-transform 2s;
 }
