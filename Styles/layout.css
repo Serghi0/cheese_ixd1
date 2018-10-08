@@ -46,7 +46,7 @@ body{
 #passieTitel{
   grid-area:titel;
   display:flex;
-  align-self: flex-start;
+  align-self: center;
 }
 
 #awardPic{
@@ -294,7 +294,7 @@ nav > ul > li > a {
 
 @media only screen and (min-width: 1440px){
 body{
-  /*grid-template-rows: 1fr 1fr 9fr 10fr 1fr;*/
+  grid-template-rows: 1fr 1fr 9fr 10fr 1fr;
 }
 
 .main{
