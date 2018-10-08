@@ -108,9 +108,7 @@ figcaption{
 
 .ad2 > select{ 
 font-size: 16px;
-display:flex;
-justify-self: center;
-align-self: : center;
+
 }
 
 @media only screen and (min-width: 1024px){
