@@ -1,0 +1,103 @@
+html {
+  box-sizing: border-box;
+}
+
+*, 
+*:before,
+*:after{
+  box-sizing: inherit;
+}
+
+body{
+  background-color: #F7F7F5;
+  color: #000;
+  font-family: avenir, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  /*background-color: rgba(50, 50, 50, 0.5);*/
+  font-family: 'Asap Condensed', verdana, sans-serif;
+  /*text-shadow: 1px 1px 1px #000;*/
+}
+
+h2, h3 {
+  color:black;
+  /*font-size: 1em;*/
+  font-weight: normal;
+  /*background-color: rgba(50, 50, 50, 0.5);*/
+  /*padding: 0.4em;*/
+  /*border-radius: 0.2em;*/
+  font-family: 'Asap Condensed', verdana, sans-serif;
+  /*text-shadow: 1px 1px 1px #000;*/
+
+}
+h3 {
+  /*font-size: 0.8em;*/
+  /*background-color: rgba(50, 50, 50, 0.2);  */
+}
+
+a{
+  text-decoration: none;
+  color:#9B870B;
+}
+
+.header, .main, .ad1, .ad2, .foot{
+  padding: 1% 5%;
+}
+
+.header {
+  padding: 0.3% 5%;
+    background-color: #9B870B;
+}
+#menu {
+    background-color: #9B870B;
+}
+/*.main {
+
+}
+.ad1 {
+}
+.ad2 {
+
+}*/
+.foot {
+    background-color: #9B870B;
+}
+
+img {
+  width: 100%;
+  margin: 0;
+  border-radius: 10px;
+}
+
+/*footer {
+
+}*/
+
+figure{
+  width:100%;
+  margin:0;
+}
+
+figcaption{
+  font-size: 11px;
+}
+
+.icons{
+  height:24px;
+  width:24px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+.ad2 > select{ 
+font-size: 16px; }
+@media only screen and (min-width: 601px){
+h1 {
+  text-align: left;
+}
+}
