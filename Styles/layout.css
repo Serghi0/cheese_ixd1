@@ -8,7 +8,8 @@ body{
   grid-template-areas: 
         "menu title title"
         "menu main  main"
-        "menu ad1   ad2"
+        "menu ad1   ad1"
+        "menu ad2   ad2"
         "menu foot  foot "; 
 }
 
