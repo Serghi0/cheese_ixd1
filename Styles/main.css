@@ -108,7 +108,13 @@ figcaption{
 
 .ad2 > select{ 
 font-size: 16px;
+border:none;
+outline:none;
+}
 
+.ad2 > select:focus, .ad2 > select:hover{
+  color: #D16F5E;
+ transition: color 500ms ease-in;  
 }
 
 @media only screen and (min-width: 1024px){
