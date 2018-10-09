@@ -230,11 +230,6 @@ nav > ul > li > a {
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(4,1fr);
   grid-gap: 0px;
-/*  grid-template-areas: 
-        "menu menu title title title title"
-        "menu menu main  main ad1 ad1"
-        "menu menu main main  ad2 ad2"
-        "menu menu foot  foot foot foot"; */
   }
 
 .header{
