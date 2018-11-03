@@ -176,7 +176,7 @@ header {
 }
 
 .inactive {
-  z-index:999;
+  z-index:999 ;
   max-height: 0vh;
   transform: translate3d(0,0,0);
   transition:  max-height ease-in-out 1s, transform 500ms ease-in-out 1s;
@@ -223,6 +223,8 @@ nav > ul > li > a {
   color: #000;
   text-decoration: none;
   font-weight: bold;
+  line-height: 26px;
+  letter-spacing: .34px;
 }
 
 @media only screen and (min-width: 768px){

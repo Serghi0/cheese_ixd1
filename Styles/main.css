@@ -68,6 +68,11 @@ a:hover{
 #menu {
     background-color: #9B870B;
 }
+
+nav ul li a{
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
 /*.main {
 
 }
